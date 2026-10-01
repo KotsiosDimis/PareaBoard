@@ -29,6 +29,17 @@ namespace PareaBoard.Api.Data
             modelBuilder.Entity<RoundScore>()
                 .HasIndex(s => new { s.RoundId, s.GamePlayerId })
                 .IsUnique();
+
+            modelBuilder.Entity<Player>()
+                .Property(p => p.Name)
+                .HasMaxLength(50);
+
+            modelBuilder.Entity<GamePlayer>()
+                .HasOne(gp => gp.Player)
+                .WithMany(p => p.GamePlayers)
+                .HasForeignKey(gp => gp.PlayerId)
+                .OnDelete(DeleteBehavior.Restrict);
+                            
         }
     }
 }
