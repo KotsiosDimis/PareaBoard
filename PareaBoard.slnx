@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src/PareaBoard.Api/PareaBoard.Api.csproj" />
+  <Project Path="src/PareaBoard.Shared/PareaBoard.Shared.csproj" />
+  <Project Path="src/PareaBoard.Web/PareaBoard.Web.csproj" />
+  <Project Path="tests/PareaBoard.Tests/PareaBoard.Tests.csproj" />
+</Solution>
